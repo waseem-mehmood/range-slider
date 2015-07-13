@@ -20,11 +20,49 @@
 </head>
 
 <body>
+<h2>Highlighted (Themed)</h2>
+  <input type="range" data-slider="true" value="0.0" data-slider-highlight="true" data-slider-theme="volume">
 
 
-  <h2>Highlighted (Themed)</h2>
-  <input type="text" data-slider="true" value="0.4" data-slider-highlight="true" data-slider-theme="volume">
 
+<table border="1" style="margin-top: 200px">
+
+	<tbody>
+		<tr>
+			<td>
+				Under 50 Employees
+			</td>
+			<td>
+				$50 per month
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Having 1 - 100 Employees
+			</td>
+			<td>
+				$100 per month
+			</td>
+			<td>
+				$1 per Employee
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Having More Than 101 Employees
+			</td>
+			<td>
+				$150 per month
+			</td>
+			<td>
+				$0.5 per Employee
+			</td>
+		</tr>
+	</tbody>
+</table>
   <script>
   $("[data-slider]")
     .each(function () {
@@ -38,6 +76,8 @@
         .nextAll(".output:first")
           .html(data.value.toFixed(3));
     });
+    
+   
   </script>
 </body>
 </html>
