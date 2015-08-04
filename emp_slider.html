@@ -200,7 +200,7 @@ hr.style {
         <form class="form-horizontal form-pricing" role="form">         
           <div class="price-slider">
             <h4 class="great">Employees</h4>
-            <span>Minimum 1 Employee is required</span>
+            
             <div class="col-sm-12">
               <div id="slider2"></div>
             </div>
@@ -208,7 +208,6 @@ hr.style {
           <div class="price-form">
             <div class="form-group">
               <label for="duration" class="col-sm-6 control-label">Employees: </label>
-              <span class="help-text">Choose your commitment</span>
               <div class="col-sm-6">
                 <input type="hidden" id="duration" class="form-control">
                 <p class="price lead" id="duration-label"></p>
@@ -218,7 +217,6 @@ hr.style {
             <hr class="style">
             <div class="form-group total">
               <label for="total" class="col-sm-6 control-label"><strong>Total: </strong></label>
-              <span class="help-text">(Amount * Employees)</span>
               <div class="col-sm-6">
                 <input type="hidden" id="total" class="form-control">
                 <p class="price lead" id="total-label"></p>
@@ -237,8 +235,8 @@ $(document).ready(function() {
 
           $("#slider2").slider({
               animate: true,
-              value:0,
-              min: 0,
+              value:1,
+              min: 1,
               max: 200,
               step: 1,
               slide: function(event, ui) {
@@ -248,7 +246,7 @@ $(document).ready(function() {
 
           //Added, set initial value.
           //$("#amount").val(0);
-          $("#duration").val(0);
+          $("#duration").val(1);
           //$("#amount-label").text(0);
           $("#duration-label").text(0);
           
